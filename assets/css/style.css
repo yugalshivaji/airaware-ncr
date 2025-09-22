@@ -16,12 +16,13 @@
     --gradient-danger: linear-gradient(135deg, #dc3545, #c82333);
 }
 
-/* Hero Section */
+/* Hero Section - FIXED */
 .hero-section {
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%); /* Clean blue gradient */
     min-height: 60vh;
     position: relative;
-    overflow: ;
+    overflow: hidden;
+    color: white; /* Ensure text is white */
 }
 
 .hero-section::before {
@@ -31,13 +32,31 @@
     left: 0;
     right: 0;
     bottom: 0;
-  /*  background: linear-gradient(45deg, rgba(0,123,255,0.1) 0%, rgba(0,86,179,0.1) 100%); */
-   
-background: #833AB4;
-background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 30%, rgba(252, 176, 69, 1) 100%);
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay for better contrast */
     pointer-events: none;
 }
 
+/* Ensure text in hero section is visible */
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1,
+.hero-section h2,
+.hero-section h3,
+.hero-section h4,
+.hero-section h5,
+.hero-section h6,
+.hero-section p,
+.hero-section .text-muted {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+.hero-section .text-muted {
+    opacity: 0.9;
+}
 /* Feature Icons */
 .feature-icon {
     width: 80px;
