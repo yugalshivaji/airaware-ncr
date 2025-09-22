@@ -32,7 +32,7 @@
     right: 0;
     bottom: 0;
   /*  background: linear-gradient(45deg, rgba(0,123,255,0.1) 0%, rgba(0,86,179,0.1) 100%); */
-    background: #020024;
+   
 background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 121, 99, 1) 0%, rgba(0, 212, 255, 1) 100%);
     pointer-events: none;
 }
