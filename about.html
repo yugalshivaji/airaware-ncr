@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Delhi-NCR Pollution Monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Same CSS as index.html */
+        :root {
+            --primary-color: #2E8B57;
+            --secondary-color: #228B22;
+            --accent-color: #32CD32;
+            --dark-color: #1a3c27;
+            --light-color: #f5f9f7;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--dark-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .section-title {
+            color: var(--dark-color);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 5px solid #f0f0f0;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .tech-item {
+            background-color: #e9f5f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-leaf me-2"></i>Delhi-NCR Pollution Monitor
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="citizen-dashboard.html">Citizen Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="policy-dashboard.html">Policy Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="section-title">About the Project</h1>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>AI-Driven Pollution Source Identification, Forecasting & Policy Dashboard</h3>
+                        <p class="lead">A comprehensive platform addressing Delhi-NCR's critical air pollution challenges through data science and AI.</p>
+                        
+                        <h4 class="mt-4">Problem Statement</h4>
+                        <p>Delhi-NCR pollution is episodic and seasonal, driven by multiple overlapping factors: crop stubble burning in Punjab/Haryana, traffic congestion, industrial activity, and meteorological conditions. Current forecasting tools lack source-level granularity, citizen-level accessibility, and real-time policy feedback.</p>
+                        
+                        <h4 class="mt-4">Our Solution</h4>
+                        <p>We developed an integrated software platform that provides:</p>
+                        <ul>
+                            <li><strong>Source Identification</strong> - Using satellite data (NASA MODIS, ISRO), CPCB monitors, and IoT sensors to trace pollution back to its source with high accuracy.</li>
+                            <li><strong>AI Forecasting</strong> - Machine learning-driven short-term (24-72 hours) and seasonal predictions for AQI trends.</li>
+                            <li><strong>Citizen App</strong> - Hyperlocal AQI with personalized health alerts, safe-route suggestions for commuting and outdoor activities.</li>
+                            <li><strong>Policy Dashboard</strong> - Data visualization tools for policymakers showing source contribution breakdowns, effectiveness of interventions, and AI-generated recommendations.</li>
+                        </ul>
+                        
+                        <h4 class="mt-4">Expected Impact</h4>
+                        <p>Our platform aims to:</p>
+                        <ul>
+                            <li>Provide transparent, data-driven insights for both citizens and policymakers</li>
+                            <li>Help enforce evidence-based interventions (e.g., focus on stubble burning vs. vehicular restrictions)</li>
+                            <li>Promote citizen engagement through personalized alerts and awareness</li>
+                            <li>Contribute to long-term pollution reduction strategies in Delhi-NCR</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <i class="fas fa-database me-2"></i>Data Sources & Methodology
+                    </div>
+                    <div class="card-body">
+                        <h5>Primary Data Sources</h5>
+                        <ul>
+                            <li><strong>NASA FIRMS</strong> - Satellite data for fire detection and monitoring</li>
+                            <li><strong>AQICN API</strong> - Real-time air quality index data</li>
+                            <li><strong>OpenWeather API</strong> - Meteorological data for forecasting models</li>
+                            <li><strong>CPCB</strong> - Government monitoring station data</li>
+                            <li><strong>ISRO</strong> - Indian satellite data for regional analysis</li>
+                        </ul>
+                        
+                        <h5>AI/ML Methodology</h5>
+                        <p>Our forecasting models use:</p>
+                        <ul>
+                            <li>Time-series analysis (ARIMA, Prophet) for seasonal trends</li>
+                            <li>Random Forest and Gradient Boosting for source attribution</li>
+                            <li>Neural networks for complex pattern recognition</li>
+                            <li>Ensemble methods to improve prediction accuracy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-users me-2"></i>Development Team
+                    </div>
+                    <div class="card-body">
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member">
+                            <h5>Rahul Sharma</h5>
+                            <p class="text-muted">Project Lead & Data Scientist</p>
+                            <p>Specialized in environmental data analysis and machine learning applications.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member">
+                            <h5>Priya Patel</h5>
+                            <p class="text-muted">Frontend Developer</p>
+                            <p>Expert in responsive web design and data visualization techniques.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Team Member">
+                            <h5>Amit Kumar</h5>
+                            <p class="text-muted">Backend Developer</p>
+                            <p>Focused on API integration and database management for real-time data processing.</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member">
+                            <h5>Neha Gupta</h5>
+                            <p class="text-muted">UI/UX Designer</p>
+                            <p>Creating intuitive user experiences for both citizen and policymaker dashboards.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <i class="fas fa-code me-2"></i>Technology Stack
+                    </div>
+                    <div class="card-body">
+                        <h5>Frontend</h5>
+                        <div class="tech-stack">
+                            <span class="tech-item">HTML5</span>
+                            <span class="tech-item">CSS3</span>
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Bootstrap 5</span>
+                            <span class="tech-item">Chart.js</span>
+                        </div>
+                        
+                        <h5 class="mt-3">Backend</h5>
+                        <div class="tech-stack">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Flask</span>
+                            <span class="tech-item">REST APIs</span>
+                            <span class="tech-item">SQLite</span>
+                        </div>
+                        
+                        <h5 class="mt-3">Data Science</h5>
+                        <div class="tech-stack">
+                            <span class="tech-item">Pandas</span>
+                            <span class="tech-item">NumPy</span>
+                            <span class="tech-item">Scikit-learn</span>
+                            <span class="tech-item">TensorFlow</span>
+                        </div>
+                        
+                        <h5 class="mt-3">APIs Integrated</h5>
+                        <div class="tech-stack">
+                            <span class="tech-item">NASA FIRMS</span>
+                            <span class="tech-item">AQICN</span>
+                            <span class="tech-item">OpenWeather</span>
+                            <span class="tech-item">Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card mt-4">
+                    <div class="card-header">
+                        <i class="fas fa-trophy me-2"></i>Smart India Hackathon 2025
+                    </div>
+                    <div class="card-body">
+                        <p>This project is developed for the <strong>Smart India Hackathon 2025</strong> under the theme <strong>Clean & Green Technology</strong>.</p>
+                        <p><strong>Problem Statement ID:</strong> 25216</p>
+                        <p><strong>Organization:</strong> AICTE</p>
+                        <p><strong>Department:</strong> AICTE</p>
+                        <p><strong>Category:</strong> Software</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Delhi-NCR Pollution Monitor</h5>
+                    <p>An AI-driven platform for pollution source identification, forecasting, and policy recommendations.</p>
+                    <div class="social-links">
+                        <a href="#" class="me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="citizen-dashboard.html">Citizen Dashboard</a></li>
+                        <li><a href="policy-dashboard.html">Policy Dashboard</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Data Sources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank">NASA FIRMS</a></li>
+                        <li><a href="https://www.airnow.gov/" target="_blank">AirNow</a></li>
+                        <li><a href="https://aqicn.org/api/" target="_blank">AQICN</a></li>
+                        <li><a href="https://openweathermap.org/api" target="_blank">OpenWeather</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-envelope me-2"></i> info@pollutionmonitor.in</li>
+                        <li><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Delhi NCR, India</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-0">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Delhi-NCR Pollution Monitor. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">Developed for Smart India Hackathon 2025</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
